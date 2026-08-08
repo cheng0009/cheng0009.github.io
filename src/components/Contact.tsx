@@ -8,7 +8,7 @@ export default function Contact() {
       <div className="mx-auto max-w-[1400px] px-5 py-24 md:px-10 md:py-32">
         <div className="grid items-center gap-14 md:grid-cols-[1.2fr_0.8fr] lg:gap-20">
           <Reveal>
-            <h2 className="text-[clamp(2.5rem,5.5vw,4.5rem)] font-black leading-[1.06] tracking-tight">
+            <h2 className="text-[clamp(2rem,4.4vw,3.6rem)] font-bold leading-[1.06] tracking-tight">
               想看看你的内容，
               <br />
               在这条线上怎么跑
@@ -19,7 +19,7 @@ export default function Contact() {
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <a
                 href={WECHAT_HREF}
-                className="inline-flex items-center gap-2 bg-ink px-8 py-4 text-lg font-bold text-white transition-transform hover:bg-white hover:text-ink dark:bg-white dark:text-ink dark:hover:bg-ink dark:hover:text-white"
+                className="inline-flex items-center gap-2 bg-ink px-8 py-4 text-lg font-semibold text-white transition-transform hover:bg-white hover:text-stone-600 dark:bg-white dark:text-stone-600 dark:hover:bg-ink dark:hover:text-white"
               >
                 <WechatLogo size={22} weight="bold" />
                 {CTA_LABEL}
@@ -41,7 +41,7 @@ export default function Contact() {
                     待替换
                   </span>
                 </div>
-                <p className="mt-4 text-center text-base font-bold">个人微信</p>
+                <p className="mt-4 text-center text-base font-semibold">个人微信</p>
               </div>
               {/* TODO: 替换为真实公众号二维码图片 */}
               <div className="p-6">
@@ -52,7 +52,7 @@ export default function Contact() {
                     待替换
                   </span>
                 </div>
-                <p className="mt-4 text-center text-base font-bold">公众号</p>
+                <p className="mt-4 text-center text-base font-semibold">公众号</p>
               </div>
             </div>
           </Reveal>

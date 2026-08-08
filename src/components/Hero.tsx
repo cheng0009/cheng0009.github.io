@@ -28,7 +28,7 @@ export default function Hero() {
             </p>
             <motion.h1
               {...enter(0.08)}
-              className="mt-6 text-[clamp(2.75rem,6.6vw,6rem)] font-black leading-[1.04] tracking-tight"
+              className="mt-6 text-[clamp(2.2rem,5.3vw,4.8rem)] font-bold leading-[1.04] tracking-tight"
             >
               一个人
               <br />
@@ -58,32 +58,31 @@ export default function Hero() {
 
           <motion.div {...enter(0.2)} className="relative">
             <div className="hairline relative overflow-hidden border-2 bg-white dark:bg-stone-950">
-              <div className="flex items-center justify-between border-b-2 border-ink px-5 py-4 dark:border-white/25">
-                <p className="font-mono text-[13px] font-medium tracking-[0.22em]">生产单</p>
-                <p className="font-display text-[13px] font-bold tracking-[0.22em] text-blue dark:text-blue">
-                  NO.06/06
-                </p>
+              <img
+                src="./images/hero-creator.jpg"
+                alt="内容创作者在麦克风前录制自己的知识节目"
+                width="1200"
+                height="900"
+                className="aspect-[4/3] w-full object-cover"
+                loading="eager"
+              />
+              <div className="absolute left-4 top-4 bg-white px-3 py-1.5 font-mono text-[13px] font-medium tracking-[0.22em]">
+                生产单
               </div>
-              <div className="flex items-center justify-between p-5 md:p-6">
-                <p className="max-w-[14ch] text-2xl font-black leading-tight md:text-3xl">
-                  从想清楚
-                  <br />
-                  到发出去
-                </p>
-                <div className="relative">
-                  <div
-                    aria-hidden
-                    className="h-[150px] w-[150px] rounded-full bg-blue md:h-[190px] md:w-[190px]"
-                  />
-                  <span className="font-display absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[64px] font-bold leading-none text-white md:text-[80px]">
-                    06
-                  </span>
+              <div className="absolute bottom-0 left-0 right-0 border-t-2 border-ink bg-ink px-5 py-4">
+                <div className="flex items-end justify-between">
+                  <div>
+                    <p className="font-display text-2xl font-semibold leading-none text-white">
+                      06 / 06
+                    </p>
+                    <p className="mt-1.5 font-mono text-[13px] tracking-[0.14em] text-white/80">
+                      从想清楚 到发出去
+                    </p>
+                  </div>
+                  <p className="font-mono text-[13px] tracking-[0.14em] text-white/80">
+                    每一步 · 都有系统兜底
+                  </p>
                 </div>
-              </div>
-              <div className="border-t-2 border-ink px-5 py-4 dark:border-white/25">
-                <p className="font-display text-[15px] font-medium tracking-[0.08em]">
-                  每一步 · 都有系统兜底
-                </p>
               </div>
             </div>
           </motion.div>
@@ -94,7 +93,7 @@ export default function Hero() {
         <div className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-x-10 gap-y-2 px-5 py-5 md:px-10">
           {STEPS.map((s, i) => (
             <span key={s} className="flex items-center gap-10">
-              <span className="font-display text-lg font-bold tracking-[0.14em] md:text-xl">
+              <span className="font-display text-lg font-semibold tracking-[0.14em] md:text-xl">
                 {s}
               </span>
               {i < STEPS.length - 1 && (

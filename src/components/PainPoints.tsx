@@ -29,7 +29,7 @@ export default function PainPoints() {
       <div className="grid gap-12 md:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <div className="md:sticky md:top-28 md:self-start">
           <Reveal>
-            <h2 className="text-[clamp(2.25rem,4.5vw,3.75rem)] font-black leading-[1.08] tracking-tight">
+            <h2 className="text-[clamp(1.8rem,3.6vw,3rem)] font-bold leading-[1.08] tracking-tight">
               一个人做内容，
               <br />
               困在流水线上游
@@ -45,11 +45,11 @@ export default function PainPoints() {
           {POINTS.map((p) => (
             <RevealItem key={p.no} className="hairline border-b-2 py-10 md:py-12">
               <div className="grid grid-cols-[3.5rem_1fr] items-baseline gap-x-6 md:grid-cols-[6rem_1fr]">
-                <span className="font-display text-3xl font-bold text-blue md:text-5xl">
+                <span className="font-display text-xl font-semibold text-blue md:text-[2.4rem]">
                   {p.no}
                 </span>
                 <div>
-                  <h3 className="text-2xl font-black tracking-tight md:text-4xl">
+                  <h3 className="text-xl font-bold tracking-tight md:text-[1.8rem]">
                     {p.title}
                   </h3>
                   <p className="mt-4 max-w-[48ch] text-lg font-medium leading-relaxed">

@@ -15,7 +15,7 @@ export default function Capabilities() {
           <span className="mr-3 inline-block h-[10px] w-[10px] bg-blue align-middle" />
           能力
         </p>
-        <h2 className="mt-6 text-[clamp(2.25rem,4.5vw,3.75rem)] font-black leading-[1.08] tracking-tight">
+        <h2 className="mt-6 text-[clamp(1.8rem,3.6vw,3rem)] font-bold leading-[1.08] tracking-tight">
           为知识内容而生的整套能力
         </h2>
         <p className="mt-6 text-lg font-medium leading-relaxed">
@@ -28,12 +28,12 @@ export default function Capabilities() {
         <Reveal className="md:col-span-8">
           <div className="flex h-full flex-col bg-blue p-8 text-white md:p-10">
             <div className="flex items-baseline justify-between">
-              <span className="font-display text-3xl font-bold">A</span>
+              <span className="font-display text-xl font-semibold">A</span>
               <span className="font-mono text-[13px] font-medium tracking-[0.2em] text-white/90">
                 脚本层
               </span>
             </div>
-            <h3 className="mt-10 text-3xl font-black tracking-tight md:text-4xl">
+            <h3 className="mt-10 text-xl font-bold tracking-tight md:text-[1.8rem]">
               四套脚本模板
             </h3>
             <p className="mt-4 max-w-[46ch] text-lg font-medium leading-relaxed text-white/95">
@@ -51,10 +51,10 @@ export default function Capabilities() {
                   key={code}
                   className="border-2 border-white/40 px-4 py-4"
                 >
-                  <p className="font-display text-sm font-bold tracking-[0.18em] text-white/80">
+                  <p className="font-display text-sm font-semibold tracking-[0.18em] text-white/80">
                     {code}
                   </p>
-                  <p className="mt-1 text-base font-bold">{name}</p>
+                  <p className="mt-1 text-base font-semibold">{name}</p>
                 </div>
               ))}
             </div>
@@ -65,7 +65,7 @@ export default function Capabilities() {
         <Reveal delay={0.1} className="md:col-span-4">
           <div className="flex h-full flex-col bg-ink p-8 text-white md:p-10 dark:bg-ink dark:text-white">
             <div className="flex items-baseline justify-between">
-              <span className="font-display text-3xl font-bold">B</span>
+              <span className="font-display text-xl font-semibold">B</span>
               <span className="font-mono text-[13px] font-medium tracking-[0.2em] text-white/80">
                 IP 层
               </span>
@@ -78,7 +78,7 @@ export default function Capabilities() {
                 </span>
               </div>
               <div className="mt-6">
-                <h3 className="text-2xl font-black tracking-tight">IP 形象「小黑」</h3>
+                <h3 className="text-xl font-bold tracking-tight">IP 形象「小黑」</h3>
                 <p className="mt-3 text-base font-medium leading-relaxed text-white/90">
                   手绘角色贯穿全片，账号辨识度来自一致的形象，不靠撞脸。
                 </p>
@@ -91,19 +91,19 @@ export default function Capabilities() {
         <Reveal className="md:col-span-4">
           <div className="hairline h-full border-2 bg-white p-8 md:p-10 dark:bg-stone-950">
             <div className="flex items-baseline justify-between">
-              <span className="font-display text-3xl font-bold">C</span>
+              <span className="font-display text-xl font-semibold">C</span>
               <span className="font-mono text-[13px] font-medium tracking-[0.2em]">
                 视觉层
               </span>
             </div>
-            <h3 className="mt-10 text-3xl font-black tracking-tight">五种视觉模式</h3>
+            <h3 className="mt-10 text-xl font-bold tracking-tight">五种视觉模式</h3>
             <p className="mt-4 text-base font-medium leading-relaxed md:text-lg">
               实拍、信息图表、流程插画、IP 手绘、叠加，按内容自动分配，
               一条视频里至少两种视觉，不单调。
             </p>
             <ul className="mt-8 space-y-3">
               {MODES.map((m) => (
-                <li key={m} className="flex items-center gap-3 text-base font-bold md:text-lg">
+                <li key={m} className="flex items-center gap-3 text-base font-semibold md:text-lg">
                   <span className="inline-block h-[10px] w-[10px] bg-blue" />
                   {m}
                 </li>
@@ -116,12 +116,12 @@ export default function Capabilities() {
         <Reveal delay={0.1} className="md:col-span-4">
           <div className="hairline h-full border-2 bg-white p-8 md:p-10 dark:bg-stone-950">
             <div className="flex items-baseline justify-between">
-              <span className="font-display text-3xl font-bold">D</span>
+              <span className="font-display text-xl font-semibold">D</span>
               <span className="font-mono text-[13px] font-medium tracking-[0.2em]">
                 分发层
               </span>
             </div>
-            <h3 className="mt-10 text-3xl font-black tracking-tight">一键多平台发布</h3>
+            <h3 className="mt-10 text-xl font-bold tracking-tight">一键多平台发布</h3>
             <p className="mt-4 text-base font-medium leading-relaxed md:text-lg">
               一条成片，六个平台同时分发；定时发布，睡觉时内容也在更新。
             </p>
@@ -129,7 +129,7 @@ export default function Capabilities() {
               {PLATFORMS.map((p) => (
                 <span
                   key={p}
-                  className="hairline border-2 px-4 py-2 text-base font-bold"
+                  className="hairline border-2 px-4 py-2 text-base font-semibold"
                 >
                   {p}
                 </span>
@@ -142,13 +142,13 @@ export default function Capabilities() {
         <Reveal className="md:col-span-6">
           <div className="flex h-full flex-col justify-between bg-blue p-8 text-white md:p-10">
             <div className="flex items-baseline justify-between">
-              <span className="font-display text-3xl font-bold">E</span>
+              <span className="font-display text-xl font-semibold">E</span>
               <span className="font-mono text-[13px] font-medium tracking-[0.2em] text-white/90">
                 部署层
               </span>
             </div>
             <div className="mt-10">
-              <h3 className="text-3xl font-black tracking-tight md:text-4xl">全本地部署</h3>
+              <h3 className="text-xl font-bold tracking-tight md:text-[1.8rem]">全本地部署</h3>
               <p className="mt-4 max-w-[46ch] text-lg font-medium leading-relaxed text-white/95">
                 生成模型跑在你自己电脑上，不依赖云端额度，断网也能生产。
               </p>
@@ -160,13 +160,13 @@ export default function Capabilities() {
         <Reveal delay={0.1} className="md:col-span-6">
           <div className="flex h-full flex-col justify-between bg-ink p-8 text-white md:p-10 dark:bg-ink dark:text-white">
             <div className="flex items-baseline justify-between">
-              <span className="font-display text-3xl font-bold">F</span>
+              <span className="font-display text-xl font-semibold">F</span>
               <span className="font-mono text-[13px] font-medium tracking-[0.2em] text-white/80">
                 产权层
               </span>
             </div>
             <div className="mt-10">
-              <h3 className="text-3xl font-black tracking-tight md:text-4xl">
+              <h3 className="text-xl font-bold tracking-tight md:text-[1.8rem]">
                 版权与数据归你
               </h3>
               <p className="mt-4 max-w-[46ch] text-lg font-medium leading-relaxed text-white/90">

@@ -25,7 +25,7 @@ export default function Differentiators() {
     <section className="hairline border-y-2 bg-stone-100/70 dark:bg-stone-900/30">
       <div className="mx-auto max-w-[1400px] px-5 py-24 md:px-10 md:py-32">
         <Reveal className="max-w-[52ch]">
-          <h2 className="text-[clamp(2.25rem,4.5vw,3.75rem)] font-black leading-[1.08] tracking-tight">
+          <h2 className="text-[clamp(1.8rem,3.6vw,3rem)] font-bold leading-[1.08] tracking-tight">
             它不是另一种工具，
             <br />
             是另一套生产方式
@@ -43,7 +43,7 @@ export default function Differentiators() {
                   <X size={20} weight="bold" className="text-white" />
                 </span>
                 <div>
-                  <h3 className="text-2xl font-black tracking-tight md:text-4xl">
+                  <h3 className="text-xl font-bold tracking-tight md:text-[1.8rem]">
                     {d.q}
                   </h3>
                   <p className="mt-4 max-w-[54ch] text-lg font-medium leading-relaxed">

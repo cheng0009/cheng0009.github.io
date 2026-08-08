@@ -51,7 +51,7 @@ export default function Pipeline() {
       <div className="mx-auto max-w-[1400px] px-5 py-24 md:px-10 md:py-32">
         <Reveal className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-[46ch]">
-            <h2 className="text-[clamp(2.25rem,4.5vw,3.75rem)] font-black leading-[1.08] tracking-tight">
+            <h2 className="text-[clamp(1.8rem,3.6vw,3rem)] font-bold leading-[1.08] tracking-tight">
               一条流水线，六道工序
             </h2>
             <p className="mt-6 text-lg font-medium leading-relaxed">
@@ -59,9 +59,9 @@ export default function Pipeline() {
               专业判断永远在你手里。
             </p>
           </div>
-          <p className="font-display text-5xl font-bold leading-none text-blue md:text-7xl">
+          <p className="font-display text-[2.4rem] font-semibold leading-none text-blue md:text-[3.6rem]">
             06
-            <span className="text-lg font-medium text-ink/40 dark:text-white/40">
+            <span className="text-lg font-medium text-stone-600 dark:text-white/40">
               &nbsp;工序
             </span>
           </p>
@@ -80,14 +80,14 @@ export default function Pipeline() {
                 className="hairline group border-2 bg-white p-8 transition-colors hover:bg-blue md:p-10 dark:bg-stone-950 dark:hover:bg-blue"
               >
                 <div className="flex items-start justify-between">
-                  <span className="font-display text-4xl font-bold leading-none text-blue group-hover:text-white md:text-5xl">
+                  <span className="font-display text-[1.8rem] font-semibold leading-none text-blue group-hover:text-white md:text-[2.4rem]">
                     {s.no}
                   </span>
                   <span className="font-mono text-[13px] font-medium tracking-[0.18em] group-hover:text-white/70">
                     {s.meta}
                   </span>
                 </div>
-                <h3 className="mt-10 text-2xl font-black tracking-tight group-hover:text-white md:text-3xl">
+                <h3 className="mt-10 text-xl font-bold tracking-tight group-hover:text-white md:text-xl">
                   {s.title}
                 </h3>
                 <p className="mt-4 max-w-[48ch] text-base font-medium leading-relaxed group-hover:text-white/85 md:text-lg">
