@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <section id="top" className="hairline relative overflow-hidden border-b">
       <div className="mx-auto max-w-[1400px] px-5 pb-12 pt-10 md:px-10 md:pb-16 md:pt-14">
-        <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:gap-16">
           <div>
             <p {...enter(0)} className="eyebrow">
               <span className="mr-3 inline-block h-[10px] w-[10px] bg-blue align-middle dark:bg-blue" />
@@ -59,11 +59,11 @@ export default function Hero() {
           <motion.div {...enter(0.2)} className="relative">
             <div className="hairline relative overflow-hidden border-2 bg-white dark:bg-stone-950">
               <img
-                src="./images/hero-creator.png"
+                src="./images/hero-creator.webp"
                 alt="内容创作者在麦克风前录制自己的知识节目"
                 width="1200"
-                height="900"
-                className="aspect-[4/3] w-full object-cover"
+                height="1500"
+                className="aspect-[4/5] w-full object-cover"
                 loading="eager"
               />
               <div className="absolute left-4 top-4 bg-white px-3 py-1.5 font-mono text-[13px] font-medium tracking-[0.22em]">
