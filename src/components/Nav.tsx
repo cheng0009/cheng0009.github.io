@@ -13,10 +13,10 @@ export default function Nav() {
       <nav className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 md:px-10">
         <a href="#top" className="flex items-center gap-3">
           <img src="./favicon.svg" alt="" width="28" height="28" />
-          <span className="text-[15px] font-semibold tracking-tight">
+          <span className="text-base font-semibold tracking-tight">
             知二IP
           </span>
-          <span className="hairline hidden font-mono text-[11px] tracking-[0.18em] text-stone-500 sm:inline dark:text-stone-400">
+          <span className="hairline hidden font-mono text-xs tracking-[0.18em] text-stone-600 sm:inline dark:text-stone-400">
             AI 内容生产线
           </span>
         </a>
@@ -25,13 +25,13 @@ export default function Nav() {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-stone-600 transition-colors hover:text-stone-950 dark:text-stone-400 dark:hover:text-stone-100"
+              className="text-[15px] text-stone-800 transition-colors hover:text-stone-950 dark:text-stone-300 dark:hover:text-stone-100"
             >
               {l.label}
             </a>
           ))}
         </div>
-        <a href={WECHAT_HREF} className="btn-primary px-5! py-2! text-sm">
+        <a href={WECHAT_HREF} className="btn-primary px-5! py-2! text-[15px]">
           {CTA_LABEL}
         </a>
       </nav>

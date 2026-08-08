@@ -38,7 +38,7 @@ export default function Hero() {
           </p>
           <motion.h1
             {...enter(0.08)}
-            className="mt-6 text-5xl font-semibold leading-[1.08] tracking-tight md:text-6xl"
+            className="mt-6 text-6xl font-semibold leading-[1.06] tracking-tight md:text-7xl"
           >
             一个人，也能开一条
             <br />
@@ -48,7 +48,7 @@ export default function Hero() {
           </motion.h1>
           <motion.p
             {...enter(0.16)}
-            className="mt-7 max-w-[44ch] text-base leading-relaxed text-stone-600 dark:text-stone-400"
+            className="mt-7 max-w-[44ch] text-lg leading-relaxed text-stone-800 dark:text-stone-300"
           >
             部署在你电脑上的 AI 视频生产线：选题、脚本、配图、配音、合成、发布，
             全程自动。版权与数据完全归你，每一条内容仍由你的专业把关。
@@ -70,24 +70,24 @@ export default function Hero() {
           className="hairline relative border bg-stone-50/60 p-8 dark:bg-stone-900/40"
         >
           <div className="flex items-baseline justify-between">
-            <p className="font-mono text-[11px] tracking-[0.22em] text-stone-500 dark:text-stone-400">
+            <p className="font-mono text-xs tracking-[0.22em] text-stone-600 dark:text-stone-400">
               今日生产单
             </p>
-            <p className="font-mono text-[11px] text-orange-700 dark:text-orange-400">
+            <p className="font-mono text-xs text-orange-700 dark:text-orange-400">
               06 / 06
             </p>
           </div>
-          <div className="mt-6 divide-y divide-stone-900/10 dark:divide-white/10">
+          <div className="mt-6 divide-y divide-stone-900/15 dark:divide-white/10">
             {INDEX.map(([no, label], i) => (
-              <div key={no} className="flex items-center justify-between py-3.5">
-                <span className="font-mono text-sm text-stone-400 dark:text-stone-500">
+              <div key={no} className="flex items-center justify-between py-4">
+                <span className="font-mono text-base text-stone-600 dark:text-stone-400">
                   {no}
                 </span>
-                <span className="text-sm font-medium tracking-wide">{label}</span>
+                <span className="text-base font-medium tracking-wide">{label}</span>
                 <span
-                  className={`font-mono text-[11px] ${
+                  className={`font-mono text-xs ${
                     i < INDEX.length - 1
-                      ? "text-stone-400 dark:text-stone-600"
+                      ? "text-stone-500 dark:text-stone-500"
                       : "text-orange-700 dark:text-orange-400"
                   }`}
                 >
@@ -96,7 +96,7 @@ export default function Hero() {
               </div>
             ))}
           </div>
-          <p className="mt-6 border-t border-stone-900/10 pt-5 font-mono text-[11px] leading-relaxed tracking-[0.14em] text-stone-500 dark:border-white/10 dark:text-stone-400">
+          <p className="mt-6 border-t border-stone-900/15 pt-5 font-mono text-xs leading-relaxed tracking-[0.14em] text-stone-600 dark:border-white/10 dark:text-stone-400">
             从想清楚到发出去
             <br />
             每一步都有系统兜底

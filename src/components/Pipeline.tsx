@@ -54,10 +54,10 @@ export default function Pipeline() {
             <span className="mr-2 inline-block h-px w-6 translate-y-[-3px] bg-orange-700 dark:bg-orange-400" />
             生产线
           </p>
-          <h2 className="mt-5 text-3xl font-semibold tracking-tight md:text-4xl">
+          <h2 className="mt-5 text-4xl font-semibold tracking-tight md:text-5xl">
             六道工序，一条流水线
           </h2>
-          <p className="mt-5 max-w-[52ch] text-base leading-relaxed text-stone-600 dark:text-stone-400">
+          <p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-stone-800 dark:text-stone-300">
             每一条内容都走完这六步。你可以全自动跑，也可以在任意一步接管，
             专业判断永远在你手里。
           </p>
@@ -76,15 +76,15 @@ export default function Pipeline() {
                 className="group relative bg-stone-50 p-8 transition-colors hover:bg-stone-50 dark:bg-stone-950 dark:hover:bg-stone-900/60"
               >
                 <div className="flex items-baseline justify-between">
-                  <span className="font-mono text-sm text-orange-700 dark:text-orange-400">
+                  <span className="font-mono text-base text-orange-700 dark:text-orange-400">
                     {s.no}
                   </span>
-                  <span className="font-mono text-[11px] tracking-[0.18em] text-stone-400 dark:text-stone-500">
+                  <span className="font-mono text-xs tracking-[0.18em] text-stone-600 dark:text-stone-400">
                     {s.meta}
                   </span>
                 </div>
-                <h3 className="mt-8 text-xl font-medium tracking-tight">{s.title}</h3>
-                <p className="mt-3 text-[15px] leading-relaxed text-stone-600 dark:text-stone-400">
+                <h3 className="mt-8 text-2xl font-medium tracking-tight">{s.title}</h3>
+                <p className="mt-3 text-base leading-relaxed text-stone-800 dark:text-stone-300">
                   {s.body}
                 </p>
               </Cell>

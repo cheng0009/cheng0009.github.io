@@ -16,6 +16,8 @@
 }
 
 html {
+  /* 基础字号 17px：全站字体与间距按 rem 等比放大 */
+  font-size: 17px;
   scroll-behavior: smooth;
 }
 
@@ -28,6 +30,8 @@ html {
 body {
   background-color: #fafaf9;
   color: #1c1917;
+  font-size: 1rem;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -42,21 +46,21 @@ body {
   background: rgba(194, 65, 12, 0.25);
 }
 
-/* 全局细线（编辑感 hairlines） */
+/* 全局细线（编辑感 hairlines）——浅色加深提升对比 */
 .hairline {
-  border-color: rgb(28 25 23 / 0.1);
+  border-color: rgb(28 25 23 / 0.16);
 }
 
 @media (prefers-color-scheme: dark) {
   .hairline {
-    border-color: rgb(255 255 255 / 0.1);
+    border-color: rgb(255 255 255 / 0.14);
   }
 }
 
 /* eyebrow：等宽 + 宽字距 + 铅字橙标记（全站最多 3 处） */
 .eyebrow {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.28em;
 }
 
@@ -90,7 +94,7 @@ body {
 }
 
 .btn-ghost {
-  border: 1px solid rgb(28 25 23 / 0.1);
+  border: 1px solid rgb(28 25 23 / 0.16);
   color: #1c1917;
 }
 
