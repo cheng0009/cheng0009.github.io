@@ -46,24 +46,28 @@ export default function Pipeline() {
   return (
     <section
       id="pipeline"
-      className="hairline border-y bg-stone-100/60 dark:bg-stone-900/30"
+      className="hairline border-y-2 bg-stone-100/70 dark:bg-stone-900/30"
     >
       <div className="mx-auto max-w-[1400px] px-5 py-24 md:px-10 md:py-32">
-        <Reveal className="max-w-[58ch]">
-          <p className="eyebrow text-orange-700 dark:text-orange-400">
-            <span className="mr-2 inline-block h-px w-6 translate-y-[-3px] bg-orange-700 dark:bg-orange-400" />
-            生产线
-          </p>
-          <h2 className="mt-5 text-4xl font-semibold tracking-tight md:text-5xl">
-            六道工序，一条流水线
-          </h2>
-          <p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-stone-800 dark:text-stone-300">
-            每一条内容都走完这六步。你可以全自动跑，也可以在任意一步接管，
-            专业判断永远在你手里。
+        <Reveal className="flex flex-wrap items-end justify-between gap-6">
+          <div className="max-w-[46ch]">
+            <h2 className="text-[clamp(2.25rem,4.5vw,3.75rem)] font-black leading-[1.08] tracking-tight">
+              一条流水线，六道工序
+            </h2>
+            <p className="mt-6 text-lg font-medium leading-relaxed">
+              每一条内容都走完这六步。你可以全自动跑，也可以在任意一步接管，
+              专业判断永远在你手里。
+            </p>
+          </div>
+          <p className="font-display text-5xl font-bold leading-none text-blue md:text-7xl">
+            06
+            <span className="text-lg font-medium text-ink/40 dark:text-white/40">
+              &nbsp;工序
+            </span>
           </p>
         </Reveal>
 
-        <div className="mt-16 grid gap-px overflow-hidden border border-stone-900/10 bg-stone-900/10 md:grid-cols-2 lg:grid-cols-3 dark:border-white/10 dark:bg-white/10">
+        <div className="mt-16 grid gap-5 md:grid-cols-2">
           {STEPS.map((s, i) => {
             const Cell = reduce ? "div" : motion.div;
             return (
@@ -72,19 +76,21 @@ export default function Pipeline() {
                 initial={reduce ? undefined : { opacity: 0, y: 20 }}
                 whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.55, delay: (i % 3) * 0.08, ease: [0.16, 1, 0.3, 1] }}
-                className="group relative bg-stone-50 p-8 transition-colors hover:bg-stone-50 dark:bg-stone-950 dark:hover:bg-stone-900/60"
+                transition={{ duration: 0.55, delay: (i % 2) * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                className="hairline group border-2 bg-white p-8 transition-colors hover:bg-blue md:p-10 dark:bg-stone-950 dark:hover:bg-blue"
               >
-                <div className="flex items-baseline justify-between">
-                  <span className="font-mono text-base text-orange-700 dark:text-orange-400">
+                <div className="flex items-start justify-between">
+                  <span className="font-display text-4xl font-bold leading-none text-blue group-hover:text-white md:text-5xl">
                     {s.no}
                   </span>
-                  <span className="font-mono text-xs tracking-[0.18em] text-stone-600 dark:text-stone-400">
+                  <span className="font-mono text-[13px] font-medium tracking-[0.18em] group-hover:text-white/70">
                     {s.meta}
                   </span>
                 </div>
-                <h3 className="mt-8 text-2xl font-medium tracking-tight">{s.title}</h3>
-                <p className="mt-3 text-base leading-relaxed text-stone-800 dark:text-stone-300">
+                <h3 className="mt-10 text-2xl font-black tracking-tight group-hover:text-white md:text-3xl">
+                  {s.title}
+                </h3>
+                <p className="mt-4 max-w-[48ch] text-base font-medium leading-relaxed group-hover:text-white/85 md:text-lg">
                   {s.body}
                 </p>
               </Cell>

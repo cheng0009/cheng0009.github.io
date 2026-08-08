@@ -1,3 +1,4 @@
+import { X } from "@phosphor-icons/react";
 import { Reveal, RevealItem, RevealStagger } from "./Reveal";
 
 const DIFFS = [
@@ -21,33 +22,35 @@ const DIFFS = [
 
 export default function Differentiators() {
   return (
-    <section className="hairline border-y bg-stone-100/60 dark:bg-stone-900/30">
-      <div className="mx-auto grid max-w-[1400px] gap-12 px-5 py-24 md:grid-cols-[0.9fr_1.1fr] md:px-10 md:py-32 lg:gap-20">
-        <div className="md:sticky md:top-32 md:self-start">
-          <Reveal>
-            <h2 className="max-w-[16ch] text-4xl font-semibold tracking-tight md:text-5xl">
-              它不是另一种工具，
-              <br />
-              是另一套生产方式
-            </h2>
-            <p className="mt-5 max-w-[40ch] text-lg leading-relaxed text-stone-800 dark:text-stone-300">
-              单点工具解决「某一步」，生产线解决「每一步之间的衔接」。
-            </p>
-          </Reveal>
-        </div>
+    <section className="hairline border-y-2 bg-stone-100/70 dark:bg-stone-900/30">
+      <div className="mx-auto max-w-[1400px] px-5 py-24 md:px-10 md:py-32">
+        <Reveal className="max-w-[52ch]">
+          <h2 className="text-[clamp(2.25rem,4.5vw,3.75rem)] font-black leading-[1.08] tracking-tight">
+            它不是另一种工具，
+            <br />
+            是另一套生产方式
+          </h2>
+        </Reveal>
 
-        <RevealStagger className="border-t border-stone-900/10 dark:border-white/10">
+        <RevealStagger className="mt-16 border-t-2 border-ink dark:border-white/25">
           {DIFFS.map((d) => (
             <RevealItem
               key={d.q}
-              className="hairline border-b py-8 md:py-10"
+              className="hairline border-b-2 py-10 md:py-12"
             >
-              <h3 className="text-xl font-medium tracking-tight md:text-2xl">
-                {d.q}
-              </h3>
-              <p className="mt-3 max-w-[54ch] text-base leading-relaxed text-stone-800 dark:text-stone-300">
-                {d.a}
-              </p>
+              <div className="grid grid-cols-[3rem_1fr] gap-x-6 md:grid-cols-[4.5rem_1fr] md:gap-x-10">
+                <span className="flex h-10 w-10 items-center justify-center bg-blue md:h-12 md:w-12">
+                  <X size={20} weight="bold" className="text-white" />
+                </span>
+                <div>
+                  <h3 className="text-2xl font-black tracking-tight md:text-4xl">
+                    {d.q}
+                  </h3>
+                  <p className="mt-4 max-w-[54ch] text-lg font-medium leading-relaxed">
+                    {d.a}
+                  </p>
+                </div>
+              </div>
             </RevealItem>
           ))}
         </RevealStagger>

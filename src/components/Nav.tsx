@@ -9,29 +9,26 @@ const LINKS = [
 
 export default function Nav() {
   return (
-    <header className="sticky top-0 z-40 hairline border-b bg-stone-50/90 backdrop-blur-sm dark:bg-stone-950/90">
-      <nav className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 md:px-10">
+    <header className="hairline sticky top-0 z-40 border-b-2 bg-white/95 backdrop-blur-sm dark:bg-stone-950/95">
+      <nav className="mx-auto flex h-[72px] max-w-[1400px] items-center justify-between px-5 md:px-10">
         <a href="#top" className="flex items-center gap-3">
-          <img src="./favicon.svg" alt="" width="28" height="28" />
-          <span className="text-base font-semibold tracking-tight">
-            知二IP
+          <span className="flex h-8 w-8 items-center justify-center bg-ink font-display text-lg font-bold text-white dark:bg-white dark:text-ink">
+            2
           </span>
-          <span className="hairline hidden font-mono text-xs tracking-[0.18em] text-stone-600 sm:inline dark:text-stone-400">
-            AI 内容生产线
-          </span>
+          <span className="text-lg font-black tracking-tight">知二IP</span>
         </a>
         <div className="hidden items-center gap-8 md:flex">
           {LINKS.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-[15px] text-stone-800 transition-colors hover:text-stone-950 dark:text-stone-300 dark:hover:text-stone-100"
+              className="text-base font-semibold transition-colors hover:text-blue"
             >
               {l.label}
             </a>
           ))}
         </div>
-        <a href={WECHAT_HREF} className="btn-primary px-5! py-2! text-[15px]">
+        <a href={WECHAT_HREF} className="btn-primary px-5! py-2.5!">
           {CTA_LABEL}
         </a>
       </nav>

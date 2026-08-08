@@ -1,22 +1,46 @@
 @import "tailwindcss";
 
-/* ===== 设计 Token：双模式跟随系统（prefers-color-scheme）=====
-   中性 = stone（暖灰，纸张/印刷感）
-   强调 = orange（铅字橙，唯一 accent，全站锁定）
-   圆角规则：卡片/图片直角+细边框（编辑感）；仅交互元素（按钮）为胶囊形
-   数字/序号 = 等宽栈
+/* ===== 设计 Token：大胆浅色编辑风 =====
+   背景 = 纯白 #ffffff；文字 = 近黑 #0a0a0a
+   强调 = 克莱因蓝 #0029FF（唯一 accent，全站锁定）
+   形状 = 全直角 + 粗黑边框（编辑感），无圆角卡片
+   展示字体 = Space Grotesk（数字/拉丁，自托管）；中文 = 系统黑体 900 字重
 */
 
 @theme {
   --font-sans: "PingFang SC", "HarmonyOS Sans SC", "Source Han Sans SC",
     "Noto Sans CJK SC", "Microsoft YaHei", "Segoe UI", system-ui, -apple-system,
     sans-serif;
+  --font-display: "Space Grotesk", "PingFang SC", "HarmonyOS Sans SC",
+    "Microsoft YaHei", system-ui, sans-serif;
   --font-mono: ui-monospace, "SFMono-Regular", "Cascadia Mono", "JetBrains Mono",
     Consolas, monospace;
+  --color-ink: #0a0a0a;
+  --color-blue: #0029ff;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/space-grotesk-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/space-grotesk-500.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/space-grotesk-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
 }
 
 html {
-  /* 基础字号 17px：全站字体与间距按 rem 等比放大 */
   font-size: 17px;
   scroll-behavior: smooth;
 }
@@ -28,96 +52,98 @@ html {
 }
 
 body {
-  background-color: #fafaf9;
-  color: #1c1917;
+  background-color: #ffffff;
+  color: #0a0a0a;
   font-size: 1rem;
-  line-height: 1.75;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #0c0a09;
+    background-color: #0a0a0a;
     color: #f5f5f4;
   }
 }
 
 ::selection {
-  background: rgba(194, 65, 12, 0.25);
+  background: rgba(0, 41, 255, 0.18);
 }
 
-/* 全局细线（编辑感 hairlines）——浅色加深提升对比 */
+/* 编辑风粗黑边（浅色） */
 .hairline {
-  border-color: rgb(28 25 23 / 0.16);
+  border-color: rgb(10 10 10 / 0.9);
 }
 
 @media (prefers-color-scheme: dark) {
   .hairline {
-    border-color: rgb(255 255 255 / 0.14);
+    border-color: rgb(255 255 255 / 0.25);
   }
 }
 
-/* eyebrow：等宽 + 宽字距 + 铅字橙标记（全站最多 3 处） */
+/* eyebrow：等宽 + 宽字距（全站最多 3 处） */
 .eyebrow {
   font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.28em;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
 }
 
-/* 胶囊按钮（唯一交互形状） */
+/* 直角按钮（唯一交互形状） */
 .btn-primary,
 .btn-ghost {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  border-radius: 9999px;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1.25rem;
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
-    background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  gap: 0.6rem;
+  border-radius: 0;
+  padding: 0.9rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-primary:active,
 .btn-ghost:active {
-  transform: translateY(1px);
+  transform: translateY(2px);
 }
 
 .btn-primary {
-  background-color: #c2410c;
+  background-color: #0029ff;
   color: #ffffff;
 }
 
 .btn-primary:hover {
-  background-color: #9a3412;
+  background-color: #0018cc;
 }
 
 .btn-ghost {
-  border: 1px solid rgb(28 25 23 / 0.16);
-  color: #1c1917;
+  border: 2px solid rgb(10 10 10 / 0.9);
+  color: #0a0a0a;
 }
 
 .btn-ghost:hover {
-  background-color: rgb(28 25 23 / 0.05);
+  background-color: rgb(10 10 10 / 0.06);
 }
 
 @media (prefers-color-scheme: dark) {
   .btn-primary {
-    background-color: #fb923c;
-    color: #0c0a09;
+    background-color: #4c7dff;
+    color: #0a0a0a;
   }
 
   .btn-primary:hover {
-    background-color: #fdba74;
+    background-color: #6b92ff;
   }
 
   .btn-ghost {
-    border-color: rgb(255 255 255 / 0.1);
+    border-color: rgb(255 255 255 / 0.35);
     color: #f5f5f4;
   }
 
   .btn-ghost:hover {
-    background-color: rgb(255 255 255 / 0.05);
+    background-color: rgb(255 255 255 / 0.08);
   }
 }
