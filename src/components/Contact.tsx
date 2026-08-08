@@ -31,30 +31,30 @@ export default function Contact() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="grid grid-cols-2 border-2 border-white/40 bg-blue">
-              {/* TODO: 替换为真实微信二维码图片 */}
-              <div className="border-r-2 border-white/40 p-6">
-                <div className="flex aspect-square items-center justify-center border-2 border-dashed border-white/50">
-                  <span className="px-2 text-center font-mono text-[13px] font-medium leading-relaxed tracking-[0.2em] text-white/90">
-                    微信二维码
-                    <br />
-                    待替换
-                  </span>
+              <div className="grid grid-cols-2 border-2 border-white/40 bg-blue">
+                <div className="border-r-2 border-white/40 p-6">
+                  <div className="relative aspect-[2/3] overflow-hidden bg-white">
+                    <img
+                      src="./images/contact-wechat.webp"
+                      alt="个人微信二维码"
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-contain"
+                    />
+                  </div>
+                  <p className="mt-4 text-center text-base font-semibold">个人微信</p>
                 </div>
-                <p className="mt-4 text-center text-base font-semibold">个人微信</p>
-              </div>
-              {/* TODO: 替换为真实公众号二维码图片 */}
-              <div className="p-6">
-                <div className="flex aspect-square items-center justify-center border-2 border-dashed border-white/50">
-                  <span className="px-2 text-center font-mono text-[13px] font-medium leading-relaxed tracking-[0.2em] text-white/90">
-                    公众号二维码
-                    <br />
-                    待替换
-                  </span>
+                <div className="p-6">
+                  <div className="relative aspect-square overflow-hidden bg-white">
+                    <img
+                      src="./images/contact-gongzhonghao.webp"
+                      alt="公众号二维码"
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-contain"
+                    />
+                  </div>
+                  <p className="mt-4 text-center text-base font-semibold">公众号</p>
                 </div>
-                <p className="mt-4 text-center text-base font-semibold">公众号</p>
               </div>
-            </div>
           </Reveal>
         </div>
       </div>
