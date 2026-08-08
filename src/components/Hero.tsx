@@ -59,7 +59,7 @@ export default function Hero() {
           <motion.div {...enter(0.2)} className="relative">
             <div className="hairline relative overflow-hidden border-2 bg-white dark:bg-stone-950">
               <img
-                src="./images/hero-creator.jpg"
+                src="./images/hero-creator.png"
                 alt="内容创作者在麦克风前录制自己的知识节目"
                 width="1200"
                 height="900"
