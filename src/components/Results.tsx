@@ -25,7 +25,14 @@ const SLOTS = [
     alt: "录音室麦克风特写",
     aspect: "aspect-video",
   },
-  { ratio: "3:4", note: "IP 手绘场景", kind: "block" },
+  {
+    ratio: "3:4",
+    note: "IP 手绘场景",
+    kind: "img",
+    src: "./images/result-ip.webp",
+    alt: "IP 形象「小黑」手绘角色",
+    aspect: "aspect-[3/4]",
+  },
 ] as const;
 
 export default function Results() {
@@ -59,31 +66,18 @@ export default function Results() {
         {SLOTS.map((s, i) => (
           <Reveal key={s.note} delay={(i % 2) * 0.1}>
             <figure className="group">
-              {/* 已接入 Unsplash 免费摄影图（Unsplash License）；IP 场景仍为占位 */}
-              {s.kind === "img" ? (
-                <div className={`hairline relative overflow-hidden border-2 bg-white dark:bg-stone-950 ${s.aspect}`}>
-                  <img
-                    src={s.src}
-                    alt={s.alt}
-                    loading="lazy"
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
-                  <span className="absolute left-5 top-5 bg-white px-3 py-1.5 font-mono text-[13px] font-medium tracking-[0.2em]">
-                    {s.ratio}
-                  </span>
-                </div>
-              ) : (
-                <div className="relative flex aspect-[3/4] items-center justify-center bg-ink dark:bg-ink">
-                  <span className="absolute left-5 top-5 font-mono text-[13px] font-medium tracking-[0.2em] text-white/80">
-                    {s.ratio}
-                  </span>
-                  <span className="font-display text-[1.8rem] font-semibold tracking-[0.08em] text-white md:text-[3rem]">
-                    IP 形象
-                    <br />
-                    待替换
-                  </span>
-                </div>
-              )}
+              {/* 已接入 Unsplash 免费摄影图 + 自有 IP 形象（Unsplash License / 自有素材） */}
+              <div className={`hairline relative overflow-hidden border-2 bg-white dark:bg-stone-950 ${s.aspect}`}>
+                <img
+                  src={s.src}
+                  alt={s.alt}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <span className="absolute left-5 top-5 bg-white px-3 py-1.5 font-mono text-[13px] font-medium tracking-[0.2em]">
+                  {s.ratio}
+                </span>
+              </div>
               <figcaption className="mt-4 flex items-baseline justify-between">
                 <span className="text-lg font-semibold">{s.note}</span>
                 <span className="font-display text-lg font-semibold text-blue">
